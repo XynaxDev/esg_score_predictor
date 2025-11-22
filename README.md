@@ -1,185 +1,227 @@
-
 <div align="center">
- <h1> ESG Analytics Dashboard </h1>
+	<h1>ESG Analytics Dashboard</h1>
 
-![ESG Analytics](https://img.shields.io/badge/ESG-Analytics-brightgreen)
-![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-FF4B4B?logo=streamlit)
-![Pandas](https://img.shields.io/badge/Pandas-2.1.1-150458?logo=pandas)
-![Plotly](https://img.shields.io/badge/Plotly-5.17.0-3F4F75?logo=plotly)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  <img alt="React" src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+  <img alt="Flask" src="https://img.shields.io/badge/Flask-3.0-000000?style=for-the-badge&logo=flask&logoColor=white" />
+  <img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+  <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
 
-<h3>A Comprehensive ESG Performance Analytics and Visualization Platform</h3>
+<p align="center">
+  A modern analytics platform for Environmental, Social, and Governance performance monitoring
+</p>
 
-[Live Demo](https://esgpredictor.streamlit.app/) · [Report Bug](https://github.com/XynaxDev/esg_predictor/issues) · [Request Feature](https://github.com/XynaxDev/esg_predictor/issues)
-
+<p>
+  <a href="#-features">Features</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="https://github.com/XynaxDev/esg_predictor/issues">Report Bug</a> •
+  <a href="https://github.com/XynaxDev/esg_predictor/issues">Request Feature</a>
+</p>
 </div>
 
 ---
 
-## 📊 Overview
+## ✨ Features
 
-The ESG Analytics Dashboard is a sophisticated data visualization platform designed to analyze and monitor Environmental, Social, and Governance (ESG) performance metrics across various industries and regions. This tool provides actionable insights for sustainable business practices and informed decision-making.
+- **Interactive ESG Leaderboard**  
+Real-time ranking of top performers with drill-down capabilities and year-over-year tracking
 
-### ✨ Key Features
+- **Advanced Analytics**  
+Industry benchmarking, regional comparison, and trend forecasting
 
-- 🎯 **Interactive ESG Leaderboard**
-  - Real-time ranking of top performers
-  - Drill-down capabilities for detailed metrics
-  - Year-over-year performance tracking
+- **Environmental Metrics**  
+Carbon emissions, resource efficiency, and energy consumption monitoring
 
-- 📈 **Advanced Analytics**
-  - Industry benchmarking
-  - Regional performance comparison
-  - Trend analysis and forecasting
+- **Financial Integration**  
+ESG-financial correlation analysis with market performance indicators
 
-- 🌱 **Environmental Metrics**
-  - Carbon emissions tracking
-  - Resource efficiency analysis
-  - Energy consumption monitoring
+- **Smart Filtering**  
+Multi-dimensional data filtering with custom thresholds and industry-specific views
 
-- 💼 **Financial Integration**
-  - ESG-Financial correlation analysis
-  - Growth rate comparisons
-  - Market performance indicators
-
-- 🔍 **Detailed Filtering**
-  - Multi-dimensional data filtering
-  - Custom metric thresholds
-  - Industry-specific views
+---
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
+📦 Python 3.11+  
+📦 Node.js 18+  
+📦 MongoDB (Atlas or local)  
+📦 Git
+
+### Backend Setup (Flask)
 ```bash
-python -m venv esg
-source esg/bin/activate  # Linux/macOS
-esg\Scripts\activate     # Windows
+# Create virtual environment
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Mac/Linux
+
+# Install dependencies
+pip install -r backend/requirements.txt
+
+# Configure environment
+cd backend
+cp .env.example .env
+# Edit .env with your MongoDB URI and secret key
+
+# Run server
+python app.py
+# Backend runs on http://localhost:5000
 ```
 
-### Installation
-
-1. Clone the repository
+### Frontend Setup (React + Vite)
 ```bash
-git clone https://github.com/XynaxDev/esg_predictor.git
-cd esg_predictor
+cd frontend
+npm install
+
+# Configure environment
+cp .env.example .env
+# Set VITE_API_URL=http://localhost:5000
+
+# Run dev server
+npm run dev
+# Frontend runs on http://localhost:5173
 ```
 
-2. Install dependencies
-```bash
-pip install -r requirements.txt
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**  
+React 18 • Vite • Tailwind CSS • Framer Motion • Recharts
+
+**Backend**  
+Flask • Flask-CORS • JWT Auth • Flask-Mail • Flask-PyMongo
+
+**Database**  
+MongoDB Atlas
+
+**Analytics**  
+Pandas • NumPy
+
+**DevOps**  
+Docker • GitHub Actions
+
+---
+
+## 📁 Project Structure
+```
+esg_predictor/
+├── backend/
+│   ├── app/                # Flask blueprints & extensions
+│   ├── app.py             # Development entry point
+│   ├── wsgi.py            # Production entry point
+│   ├── Dockerfile         # Container configuration
+│   └── requirements.txt
+├── frontend/
+│   ├── src/               # React components
+│   ├── public/            # Static assets
+│   └── package.json
+├── data/                  # Sample CSV datasets
+├── notebook/              # Analysis notebooks
+└── LICENSE
 ```
 
-3. Run the application
-```bash
-streamlit run dashboard.py
-```
-
-## 🛠️ Technology Stack
-
-- **Frontend**: Streamlit
-- **Data Processing**: Pandas, NumPy
-- **Visualization**: Plotly, Seaborn
-- **Analysis**: SciPy, Scikit-learn
-- **Styling**: Custom CSS, Plotly Themes
+---
 
 ## 📊 Dashboard Sections
 
-### 1. Overview Dashboard
-- High-level ESG performance metrics
-- Sustainability leadership board
-- Key performance indicators
-- Financial impact analysis
+### Overview Dashboard
+- High-level ESG metrics, sustainability leaderboard, KPIs, and financial impact analysis
 
-### 2. Industry Analysis
-- Sector-wise comparisons
-- Resource efficiency metrics
-- Competitive benchmarking
-- Growth trends
+### Industry Analysis
+- Sector-wise comparisons, resource efficiency metrics, and competitive benchmarking
 
-### 3. Regional Insights
-- Geographic performance distribution
-- Regional benchmarking
-- Environmental impact by region
-- Cultural and regulatory insights
+### Regional Performance
+- Geographic distribution, compliance tracking, and regional trends
 
-### 4. Trends & Forecasting
-- Historical performance analysis
-- Future projections
-- Year-over-year growth
-- Sustainability trajectory
+### Trend Analysis
+- Historical data visualization, predictive insights, and performance forecasting
 
-### 5. Key Insights
-- Data-driven discoveries
-- Strategic implications
-- Best practices
-- Improvement opportunities
+---
 
-### 6. Recommendations
-- Actionable strategies
-- Industry-specific guidance
-- Resource optimization
-- Risk mitigation
-
-## 🔧 Advanced Configuration
-
-### Environment Variables
-```python
-# .env file
-DATA_PATH=path/to/data
-THEME=dark/light
-DEBUG_MODE=True/False
+## 🐳 Docker Deployment
+```bash
+cd backend
+docker build -t esg-backend .
+docker run -e PORT=5000 -e MONGO_URI="your-mongo-uri" -p 5000:5000 esg-backend
 ```
 
-### Custom Metrics
-```python
-# config.py
-CUSTOM_METRICS = {
-    'resource_efficiency': ['carbon', 'water', 'energy'],
-    'financial_metrics': ['revenue', 'growth', 'margin']
-}
+---
+
+## 🔧 Environment Variables
+
+### Backend (.env)
+```env
+MONGO_URI=your_mongodb_connection_string
+SECRET_KEY=your_secret_key_here
+PORT=5000
+SMTP_HOST=your_smtp_host
+SMTP_PORT=587
+SMTP_USER=your_email
+SMTP_PASSWORD=your_password
 ```
 
-## 📈 Performance Optimization
+### Frontend (.env)
+```env
+VITE_API_URL=http://localhost:5000
+```
 
-- Data caching for faster loading
-- Efficient filtering mechanisms
-- Optimized visualization rendering
-- Streamlined database queries
+---
+
+## 📝 Available Scripts
+
+### Backend
+```bash
+python app.py              # Development server
+gunicorn -b 0.0.0.0:5000 wsgi:app  # Production server
+```
+
+### Frontend
+```bash
+npm run dev               # Development server
+npm run build             # Production build
+npm run preview           # Preview production build
+npm run lint              # Run ESLint
+```
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
+Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+---
 
-Distributed under the MIT License. See `LICENSE` for more information.
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
 
 ## 🙏 Acknowledgments
 
-- Data sources and partners
-- Contributing organizations
-- Open source community
-- Streamlit framework team
-
-## 📫 Contact
-
-Akash Kumar - [akashkumar.cs27@gmail.com](mailto:akashkumar.cs27@gmail.com)
-
-Project Link: [https://github.com/XynaxDev/esg_predictor](https://github.com/XynaxDev/esg_predictor)
+Built with modern web technologies  
+Powered by open-source community  
+Inspired by sustainable business practices
 
 ---
 
 <div align="center">
 
-[![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit)](https://streamlit.io)
-[![Follow on GitHub](https://img.shields.io/github/followers/XynaxDev?style=for-the-badge&logo=github)](https://github.com/XynaxDev)
+### ⭐ If this project helped you, consider giving it a star!
+
+### Made with 💚 for a sustainable future
+
+**Let's build a better tomorrow!** 🌱
+
+[![GitHub](https://img.shields.io/badge/GitHub-XynaxDev-181717?style=social&logo=github)](https://github.com/XynaxDev)
 
 </div>

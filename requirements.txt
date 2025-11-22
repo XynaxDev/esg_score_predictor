@@ -1,20 +1,18 @@
-# Core Data Processing and Analysis
-pandas==2.1.1
-numpy==1.26.0
-
-# Visualization Libraries
-plotly==5.17.0
-seaborn==0.13.0
-matplotlib==3.8.0
-
-# Dashboard Framework
-streamlit==1.28.0
-
-# Data Format and File Handling
-openpyxl==3.1.2
+# Web API
+Flask==3.0.0
+flask-cors==4.0.0
+gunicorn==21.2.0
 python-dotenv==1.0.0
 
-# Additional Dependencies
-altair==5.1.2
+# Core data stack
+pandas==2.1.1
+numpy==1.26.0
 pytz==2023.3.post1
 python-dateutil==2.8.2
+openpyxl==3.1.2
+
+# Viz/analytics (used in notebooks and optional UI)
+matplotlib==3.8.0
+seaborn==0.13.0
+plotly==5.17.0
+altair==5.1.2

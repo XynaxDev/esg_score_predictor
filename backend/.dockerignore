@@ -1,0 +1,23 @@
+# Exclude files from the Docker build context
+
+# VCS
+.git
+.gitignore
+
+# Python cache and envs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+
+# Local data (image will fall back to sample data)
+../data/
+../output/
+../esg/
