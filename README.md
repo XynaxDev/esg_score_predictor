@@ -15,8 +15,10 @@
 <p>
   <a href="#-features">Features</a> •
   <a href="#-quick-start">Quick Start</a> •
-  <a href="https://github.com/XynaxDev/esg_predictor/issues">Report Bug</a> •
-  <a href="https://github.com/XynaxDev/esg_predictor/issues">Request Feature</a>
+  <a href="https://github.com/XynaxDev/esg_score_predictor
+/issues">Report Bug</a> •
+  <a href="https://github.com/XynaxDev/esg_score_predictor
+/issues">Request Feature</a>
 </p>
 </div>
 
@@ -107,7 +109,7 @@ Docker • GitHub Actions
 
 ## 📁 Project Structure
 ```
-esg_predictor/
+esg_score_predictor/
 ├── backend/
 │   ├── app/                # Flask blueprints & extensions
 │   ├── app.py             # Development entry point
